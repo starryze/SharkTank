@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const ctx = document.getElementById('donation-chart').getContext('2d');
     const donationChart = new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
             labels: ['Direct Support', 'Operational Cost', 'Payment Expenses', 'Fundraising Adverts'],
             datasets: [{
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545'],
                 borderWidth: 1
             }]
+        },
+        options: {
+            cutoutPercentage: 60
         }
     });
 
@@ -45,3 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
         donationChart.update();
     });
 });
+
