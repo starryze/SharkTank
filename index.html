@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Our Mission</h1>
+        <p>Transparency Software: Helping you allocate your donations effectively.</p>
+    </header>
+
+    <main>
+        <section class="donation-section">
+            <h2>Donate Now</h2>
+            <form id="donation-form">
+                <label for="donation-amount">Enter Donation Amount ($):</label>
+                <input type="number" id="donation-amount" name="donation-amount" min="0" step="1">
+            </form>
+            <div class="chart-container">
+                <canvas id="donation-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="fund-allocation">
+            <h2>Fund Allocation</h2>
+            <p>Total Cash on Hand: $<span id="total-cash">0</span></p>
+            <ul>
+                <li>Direct Support: $<span id="direct-support">0</span></li>
+                <li>Operational Cost: $<span id="operational-cost">0</span></li>
+                <li>Payment Expenses: $<span id="payment-expenses">0</span></li>
+                <li>Fundraising Adverts: $<span id="fundraising-adverts">0</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
